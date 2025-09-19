@@ -8,7 +8,7 @@ This project demonstrates modern web development practices, interactive UI compo
 
 ## Demo
 
-🌐 **Live Demo:** [View the Netflix Clone](https://your-demo-link.com)
+🌐 **Live Demo:** [View the Netflix Clone](https://emma234234.github.io/plp-webtechnologies-classroom-july2025-july-2025-final-project-and-deployment-Final-Project-and-Depl/)
 
 ---
 
