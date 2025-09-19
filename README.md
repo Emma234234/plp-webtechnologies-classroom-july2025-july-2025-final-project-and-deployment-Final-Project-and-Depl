@@ -1,7 +1,7 @@
 
 # Netflix Clone
 
-A responsive Netflix-inspired web application built with HTML, Tailwind CSS, and JavaScript.  
+A responsive Netflix-inspired web application built with HTML, Tailwind CSS and CSS3, and JavaScript.  
 This project demonstrates modern web development practices, interactive UI components, and a clean, user-friendly design.
 
 ---
@@ -27,7 +27,7 @@ This project demonstrates modern web development practices, interactive UI compo
 ## Technologies Used
 
 - **HTML5** – Semantic markup for structure.
-- **Tailwind CSS** – Utility-first CSS framework for styling and layout.
+- **Tailwind and CSS3** – Utility-first CSS framework for styling and layout.
 - **JavaScript (ES6)** – For interactivity (FAQ toggles, Swiper carousel, dark mode).
 - **Swiper.js** – For the trending carousel/slider.
 - **Google Fonts (Inter)** – Clean, modern typography.
@@ -47,7 +47,7 @@ This project demonstrates modern web development practices, interactive UI compo
 /netflix-clone
 │
 ├── index.html         # Main HTML file
-├── styles.css         # Custom styles and theme variables
+├── style.css          # Custom styles and theme variables
 ├── script.js          # JavaScript for interactivity
 └── README.md          # Project documentation
 ```
@@ -67,7 +67,7 @@ This project demonstrates modern web development practices, interactive UI compo
 
 - **Change Images:** Update hero or carousel images by editing the `index.html`.
 - **Edit Content:** Modify text, features, or FAQ items directly in the HTML.
-- **Adjust Styles:** Tweak colors and layout in `styles.css` using CSS variables.
+- **Adjust Styles:** Tweak colors and layout in `style.css` using CSS variables.
 
 ---
 
