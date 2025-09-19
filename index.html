@@ -312,5 +312,81 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the language select (header)
+    const langSelect = document.querySelector('header select');
+    // Map of English to Spanish translations
+    const translations = {
+        "Unlimited movies, TV shows and more": "Películas, series y mucho más, sin límites",
+        "Starts at $30. Cancel at any time.": "Desde $30. Cancela en cualquier momento.",
+        "Ready to watch? Enter your email to create or restart your membership.": "¿Listo para ver? Ingresa tu correo electrónico para crear o reiniciar tu membresía.",
+        "Get Started": "Comenzar",
+        "Trending Now": "Tendencias",
+        "More reasons to join": "Más razones para unirte",
+        "Enjoy on your TV": "Disfruta en tu TV",
+        "Download your shows to watch offline": "Descarga tus series para verlas sin conexión",
+        "Watch everywhere": "Mira en todas partes",
+        "Create profiles for kids": "Crea perfiles para niños",
+        "Frequently Asked Questions": "Preguntas frecuentes",
+        "What is Netflix?": "¿Qué es Netflix?",
+        "How much does Netflix cost?": "¿Cuánto cuesta Netflix?",
+        "Where can I watch?": "¿Dónde puedo ver?",
+        "How do I cancel?": "¿Cómo cancelo?",
+        "What can I watch on Netflix?": "¿Qué puedo ver en Netflix?",
+        "Is Netflix good for kids?": "¿Netflix es bueno para niños?",
+        "Questions? Call": "¿Preguntas? Llama al",
+        "Netflix USA": "Netflix EE.UU.",
+        "Email address": "Correo electrónico"
+     
+    };
+
+    function translateToSpanish() {
+        // Translate all elements with matching text
+        Object.keys(translations).forEach(eng => {
+            // Find all elements containing the English text
+            document.querySelectorAll('*').forEach(el => {
+                if (el.childNodes.length === 1 && el.textContent.trim() === eng) {
+                    el.textContent = translations[eng];
+                }
+                // For input placeholders and labels
+                if (el.placeholder === eng) {
+                    el.placeholder = translations[eng];
+                }
+                if (el.tagName === "LABEL" && el.textContent.trim() === eng) {
+                    el.textContent = translations[eng];
+                }
+            });
+        });
+    }
+
+    function translateToEnglish() {
+        // Reverse translation
+        Object.entries(translations).forEach(([eng, esp]) => {
+            document.querySelectorAll('*').forEach(el => {
+                if (el.childNodes.length === 1 && el.textContent.trim() === esp) {
+                    el.textContent = eng;
+                }
+                if (el.placeholder === esp) {
+                    el.placeholder = eng;
+                }
+                if (el.tagName === "LABEL" && el.textContent.trim() === esp) {
+                    el.textContent = eng;
+                }
+            });
+        });
+    }
+
+    langSelect.addEventListener('change', function() {
+        if (langSelect.value === "Spanish") {
+            translateToSpanish();
+        } else {
+            translateToEnglish();
+        }
+    });
+});
+</script>
+
 </body>
 </html>
